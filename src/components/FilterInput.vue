@@ -1,11 +1,18 @@
 <template>
   <div>
     <label :for="label">{{ label }}</label>
-    <input :placeholder="placeholder" :type="type" :id="label" v-model="value">
+    <input :disabled="!isLoaded"
+           :placeholder="isLoaded ? placeholder : `${placeholder}(Disabled)`"
+           :type="type"
+           :value="input"
+           @input="updateField"
+           :id="label">
   </div>
 </template>
 
 <script>
+import {mapGetters, mapState} from "vuex"
+
 export default {
   name: "Filter",
   props: {
@@ -21,16 +28,23 @@ export default {
       required: true,
       type: String
     },
+    field: {
+      required: true,
+      type: String
+    },
     placeholder: String
   },
-  data: () => {
-    return {
-      value: null
-    }
+  computed: {
+    ...mapState({
+      input(state) {
+        return state.filters[this.field]
+      }
+    }),
+    ...mapGetters(['isLoaded'])
   },
-  watch: {
-    value: (val, oldVal) => {
-      console.log(val, oldVal)
+  methods: {
+    updateField({target}) {
+      this.$store.commit(this.commit, target.value)
     }
   }
 }
@@ -40,9 +54,11 @@ export default {
 div {
   width: 100%;
 }
+
 label {
   font-size: 1.3rem;
 }
+
 input {
   width: 100%;
   height: 6vh;
@@ -54,6 +70,7 @@ input {
   margin-top: 10px;
   font-size: 1.3rem;
 }
+
 input::placeholder {
   font-size: 1.3rem;
   color: rgba(255, 255, 255, .6);

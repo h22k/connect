@@ -2,6 +2,10 @@ import instance from './base'
 
 export default {
     get: async () => {
-        return await instance.get('applicant-test')
+        try {
+            return (await instance.get('applicant-test/')).data
+        } catch (e) {
+            return {}
+        }
     }
 }

@@ -1,15 +1,21 @@
 <template>
   <div id="app">
     <HeaderSection :links="links"/>
-    <router-view/>
+    <div class="container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <style>
 @import "./assets/main.css";
+.container {
+  background: linear-gradient(to right, var(--body-background-from), var(--body-background-to));
+  min-height: 100vh;
+}
 </style>
 <script>
-import HeaderSection from "@/components/HeaderSection";
+import HeaderSection from "@/components/HeaderSection"
 export default {
   components: {HeaderSection},
   data: () => {

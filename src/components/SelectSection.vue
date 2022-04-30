@@ -1,8 +1,8 @@
 <template>
   <div>
     <label>Order By</label>
-    <select v-model="input">
-      <option value="">Select One</option>
+    <select v-model="sort" @input="updateSortField">
+      <option selected>Select One</option>
       <option v-for="(option, key) in options"
               :value="option.value"
               :key="key"
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import {mapState} from "vuex"
+
 export default {
   name: "SelectSection",
   props: {
@@ -22,14 +24,13 @@ export default {
       type: Array
     }
   },
-  data: () => {
-    return {
-      input: ''
-    }
+  computed: {
+    ...mapState(['sort'])
   },
-  watch: {
-    input: (val, oldVal) => {
-      console.log(val, oldVal)
+  methods: {
+    updateSortField({target}) {
+      // console.log('eklendi', target.value)
+      this.$store.commit('setSort', target.value)
     }
   }
 }

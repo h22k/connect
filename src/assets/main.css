@@ -61,10 +61,13 @@ table {
 
 * {
     max-width: 100%;
-    overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
+    /*border: 1px solid red!important;*/
 }
 
-
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
 .header {
 }
