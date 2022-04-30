@@ -1,24 +1,7 @@
 # connectnow
 
-## Project setup
-```
-yarn install
-```
+## demo
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+go visit for demo pls: (h22k.github.io/connect)[h22k.github.io/connect]
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+I did not run tests. 
