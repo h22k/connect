@@ -1,32 +1,38 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <HeaderSection :links="links"/>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+@import "./assets/main.css";
 </style>
+<script>
+import HeaderSection from "@/components/HeaderSection";
+export default {
+  components: {HeaderSection},
+  data: () => {
+    return {
+      links: [
+        {
+          to: '/',
+          text: 'Video Games',
+          content: 'Video',
+          id: 1,
+          left: '1vw',
+          top: '3vh'
+        },
+        {
+          to: '/contact',
+          text: 'Contact',
+          content: 'Contact',
+          id: 2,
+          left: '3vw',
+          top: '3vh'
+        }
+      ]
+    }
+  }
+}
+</script>
