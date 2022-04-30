@@ -1,0 +1,10 @@
+:root {
+    --margin-x-spacing: 10vw;
+    --body-background-to:  #03080f;
+    --body-background-from: #081221;
+    --card-and-panel-background: #0e1a2b;
+    --button-text-color: #ffffff;
+    --primary-text-color: #c1d1e8;
+    --input-background: #182c47;
+    --buttons-color: #5692e8;
+}
