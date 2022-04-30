@@ -30,7 +30,6 @@ export default {
 
 <style scoped>
 .header-container {
-  width: 100%;
   max-width: 100%;
   background: var(--card-and-panel-background);
   padding: 0 var(--margin-x-spacing);

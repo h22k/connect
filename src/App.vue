@@ -11,7 +11,7 @@
 @import "./assets/main.css";
 .container {
   background: linear-gradient(to right, var(--body-background-from), var(--body-background-to));
-  min-height: 100vh;
+  padding-bottom: 10vh;
 }
 </style>
 <script>
