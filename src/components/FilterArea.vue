@@ -99,4 +99,11 @@ export default {
 .filters {
   margin: 5vh 0;
 }
+
+@media (max-width: 1025px) {
+  .filter {
+    position: relative;
+    max-width: 100%;
+  }
+}
 </style>

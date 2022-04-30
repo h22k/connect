@@ -75,4 +75,10 @@ input::placeholder {
   font-size: 1.3rem;
   color: rgba(255, 255, 255, .6);
 }
+
+@media (max-width: 1025px) {
+  input {
+    width: 95%;
+  }
+}
 </style>

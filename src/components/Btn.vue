@@ -33,6 +33,10 @@ export default {
   margin-left: auto;
   padding: 1vh 2vw;
   cursor: pointer;
-
+}
+@media (max-width: 1025px) {
+  button {
+    width: 100%;
+  }
 }
 </style>

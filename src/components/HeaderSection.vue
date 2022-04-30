@@ -45,24 +45,6 @@ export default {
   font-family: 'Montserrat', sans-serif;
 }
 
-#background {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 100%;
-  width: 100%;
-  font-size: 75px;
-  color: var(--input-background);
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  user-select: none;
-  margin-left: 5vw;
-  text-transform: uppercase;
-}
-
 .links {
   display: flex;
   justify-content: space-between;
@@ -77,7 +59,7 @@ export default {
   font-size: 2em;
   text-transform: uppercase;
   position: relative;
-  padding: 3em 5em;
+  padding: 3em 5em 3em 0;
 }
 
 .link.active-link::after {
@@ -89,5 +71,20 @@ export default {
   user-select: none;
   color: var(--input-background);
   z-index: -1;
+}
+
+@media (max-width: 1025px) {
+  .links {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .link {
+    padding: 1em;
+    margin-right: 25vh;
+    font-size: 1.5em;
+  }
+  .header {
+    flex-direction: column;
+  }
 }
 </style>

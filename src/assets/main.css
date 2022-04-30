@@ -69,5 +69,19 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
-.header {
+
+.w-40 {
+    width: 40%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-92 {
+    width: 92%;
+}
+
+.w-100 {
+    width: 100%;
 }

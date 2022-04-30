@@ -36,4 +36,9 @@ export default {
   height: 100%;
   overflow: visible;
 }
+@media (max-width: 1025px) {
+  .home {
+    flex-direction: column;
+  }
+}
 </style>

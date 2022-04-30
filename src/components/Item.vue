@@ -82,4 +82,26 @@ export default {
 .summary {
   color: var(--primary-text-color);
 }
+
+@media (max-width: 1025px) {
+  .item {
+    flex-direction: column;
+    position: relative;
+  }
+  .photo {
+    min-height: 15vh;
+    width: 100%;
+  }
+  .score {
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+  }
+  .content {
+    padding-left: 2vw;
+  }
+  .text {
+    width: 100%;
+  }
+}
 </style>
